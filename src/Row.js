@@ -35,7 +35,7 @@ const Row = ({title, fetchUrl, isLargeRow}) => {
             let youtubeId = "";
 
             async function fetchYoutubeId() {
-              const response = await fetch(`http://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=39ca45225d9e96cbe5a1dbfe95818617`)
+              const response = await fetch(`https://api.themoviedb.org/3/movie/${movie.id}/videos?api_key=39ca45225d9e96cbe5a1dbfe95818617`)
                 .catch(error => console.log(`Fetch error: ${error}`))
               const data = await response.json()
               youtubeId = data.results ? (data.results.length > 0 ? data.results[0].key : "") : ""
@@ -53,7 +53,7 @@ const Row = ({title, fetchUrl, isLargeRow}) => {
               />) : null
           })}
         </div>
-        {trailerUrl && <iframe src={`http://www.youtube.com/embed/${trailerUrl}?autoplay=1`} width="100%" height="395" frameborder="0" allowfullscreen title={trailerUrl} />}
+        {trailerUrl && <iframe src={`https://www.youtube.com/embed/${trailerUrl}?autoplay=1`} width="100%" height="395" frameborder="0" allowfullscreen title={trailerUrl} />}
       </div>
     </React.Fragment>
   )
