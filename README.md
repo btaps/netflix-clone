@@ -14,6 +14,8 @@
 
 - react
 - TMDB API
+- axios
+- Firebase
 
 ## Folder Structure:
 
