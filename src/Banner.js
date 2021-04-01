@@ -21,7 +21,7 @@ const Banner = () => {
 
   return (
     <React.Fragment>
-      <header className="banner" style={{backgroundSize: "cover", backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`, backgroundPosition: "center center"}}> {/*background img*/}
+      <header className="banner" style={{backgroundSize: "cover", backgroundImage: `url("https://image.tmdb.org/t/p/original${movie?.backdrop_path}")`, backgroundPosition: "center center"}}>
         <div className="banner__contents">
           <h1 className="banner__title">{movie?.name || movie?.original_name || movie?.name}</h1>
           <div className="banner__buttons">
@@ -29,8 +29,6 @@ const Banner = () => {
             <button className="banner_button">My List</button>
           </div>
           <h1 className="banner__description">{truncate(movie?.overview, 150)}</h1>
-          {/*div > 2 buttons*/}
-          {/*description */}
         </div>
         <div className="banner--fadeBottom" />
       </header>
